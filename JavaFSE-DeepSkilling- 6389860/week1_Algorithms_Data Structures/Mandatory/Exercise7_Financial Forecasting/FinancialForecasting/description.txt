@@ -1,0 +1,39 @@
+Exercise 7: Financial Forecasting
+
+Understand Recursive Algorithms:
+Q) Explain the concept of recursion and how it can simplify certain problems.
+
+Recursion is a widely used concept in DSA to solve the problems where we need to find all the possibilities to come to a conclusion for a certain problem.
+Recursion means solving a problem by breaking it down into smaller subproblems and solving each recursively. In many cases, it helps explore all possibilities or build on previous results.
+
+for this particular question we can apply recursion since to calculate the final value after N years first we need know/have the value of N-1 th year then we calculate as follows:
+
+value after Nth year = (value after N-1 years) + (value after N-1 years * (growth/100))
+
+But For the N-1th year, we don’t know the value yet.
+
+therefore, value after N-1 years =  (value after N-2 years) + (value after N-2 years*(growth/100))
+.
+.
+.
+this will go on
+at a certain point we get 0 years means the principle value/ initial amount is itself the final value
+
+Recursion tree:
+value(N)
+   |
+   V
+value(N-1)
+   |
+   V
+value(N-2)
+   |
+   V
+   .
+   .
+   . 
+   |
+   V
+value(0) = inital value
+
+In this problem, even though there’s only one path of execution (no branching), the Nth year depends on the (N-1)th year, which makes it a perfect fit for recursion, also we can go with iterative approach.

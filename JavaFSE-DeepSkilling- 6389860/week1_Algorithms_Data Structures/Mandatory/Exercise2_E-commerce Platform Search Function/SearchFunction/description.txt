@@ -1,0 +1,71 @@
+Exercise 2: E-commerce Platform Search Function
+
+Understand Asymptotic Notation:
+Q) Explain Big O notation and how it helps in analyzing algorithms.
+
+Big O notation is a theoretical concept used to understand the time/space complexity of an algorithm in terms of its input size n. 
+It helps to calculate how the algorithm's performance for larger inputs.
+
+It expresses the worst-case scenario of an algorithm
+O(1): Constant time – independent of input size.
+
+O(n): Linear time – performance grows proportionally with input.
+
+O(log n): Logarithmic time – very efficient for large inputs (e.g., binary search).
+
+O(n^2): Quadratic time – common in nested loops (e.g., bubble sort).
+etc..
+
+Why is it important?
+As it allows comparison b/w different algorithms to find which algo is efficiently solving our problem based on the hardware we have.
+we can choose b/w the algos depending on out hardware/ requirements
+let us take situation where you need to solve a problem which have 2 ways
+1st way is O(N) with some extra space
+2nd way is O(N^2) and doesn't use any extra space
+
+if we are concerned with only the time complexity and we have good amount of space to use we can go with the 1st solution
+if we are concerned with space complexity and we need solve the problem in space then we can go with the 2nd solution
+
+this is how it helps us to decide based on our requirements.
+
+
+Q) Describe the best, average, and worst-case scenarios for search operations.
+
+Linear Search:
+Best-case: O(1) – The target is at the first index.
+Average-case: O(n/2) – The target is in the middle.
+Worst-case: O(n) – The target is at the last index or not present at all.
+
+Use cases:
+The array is unsorted.
+When we have a small dataset.
+
+
+Binary Search (on sorted data only):
+Best-case: O(1) – The target is the middle element.
+Average-case: O(log n)
+Worst-case: O(log n) – The target is at one of the ends or missing.
+
+Use Cases:
+The array is already sorted.
+When we have Larger sorted datasets.
+
+Q) Compare the time complexity of linear and binary search algorithms & Discuss which algorithm is more suitable for your platform and why.
+
+Linear Search - O(N), Binary Search - O(logN)
+if N = 10 
+L.S => t.c = 10
+B.S => t.c = 3
+
+if N = 10^3
+L.s => t.c = 10^3
+B.s => t.c = 9
+
+if N = 10^9
+L.s => t.c = 10^9
+B.s => t.c = 18
+
+we can see the drastic difference when N= 10^9 B.S is taking comparatively very very less time than L.s
+so for this platform search application Binary search is most preferrable than L.S
+but the time to sort the products also matters.
+so when ever we are adding a new product we need ensure that we are adding it at its appropriate position in the sorted order.  
