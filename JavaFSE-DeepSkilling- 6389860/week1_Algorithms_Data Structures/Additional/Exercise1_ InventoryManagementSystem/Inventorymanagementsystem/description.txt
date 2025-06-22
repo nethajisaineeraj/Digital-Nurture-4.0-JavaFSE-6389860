@@ -1,0 +1,27 @@
+Exercise 1: Inventory Management System
+
+Understand the Problem:
+
+Q)Explain why data structures and algorithms are essential in handling large inventories.
+
+In a warehouse, there may be hundreds or thousands of products. Managing this inventory efficiently requires:
+Fast lookups to find a product by its ID.
+Quick updates when stock changes.
+Accurate deletions of removed products.
+Minimal memory usage and low processing time.
+Without efficient data structures and algorithms, these operations become slow, inefficient, and can resulted in errors as the dataset grows.
+
+
+Q) Discuss the types of data structures suitable for this problem.
+
+HashMap (Map<Integer, Product>)    -Allows O(1) time for add, update, delete, and search using productId as key.
+ArrayList (List<Product>)	   -Easy to traverse and display all products, but slower (O(n)) for searching/updating by productId.
+
+
+Analysis:
+Q) Analyze the time complexity of each operation (add, update, delete) in your chosen data structure.
+Using HashMap is Best Suits the Inventory management System as it's time complexity is O(1) for all search, delete, add, update.
+
+Q) Discuss how you can optimize these operations.
+Using HashMap instead of ArrayList to avoid linear searches.
+For ordered display, using LinkedHashMap (preserves insertion order).

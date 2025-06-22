@@ -1,0 +1,57 @@
+Exercise 3: Sorting Customer Orders
+
+Understand Sorting Algorithms:
+
+Q) Explain different sorting algorithms (Bubble Sort, Insertion Sort, Quick Sort, Merge Sort).
+
+Bubble Sort:
+Process: Repeatedly compares adjacent elements and swaps them if they are in the wrong order, "bubbling" the largest element to its correct position in each pass.
+
+Time Complexity:
+	Best: O(n) (when the array is already sorted)
+	Worst: O(n²)
+Space Complexity: O(1) (in place)
+
+
+
+Insertion Sort:
+Process: Builds the sorted portion of the array, one element at a time by inserting elements into their correct position in the sorted portion.
+
+Time Complexity:
+	Best: O(n) (when the array is already sorted)
+	Worst: O(n²)
+Space Complexity: O(1) (in place)
+
+
+
+Merge Sort:
+Process: Divides the list into two halves, recursively sorts each half, and then merges the sorted halves into a single sorted list.
+
+Time Complexity: O(n log n) (all cases)
+Space Complexity: O(n) (requires extra space for merging)
+
+
+
+Quick Sort
+Process: Selects a "pivot" element and partitions the Array into two subarrays (elements less than the pivot and elements greater than the pivot), then recursively sorts the subarrays.
+
+Time Complexity:
+	Best: O(n log n)
+	Average: O(n log n)
+	Worst: O(n²) (occurs when the pivot is poorly chosen)
+Space Complexity: O(1) (in place)
+		  O(log n) (for recursive stack)
+
+
+Q) Compare the performance (time complexity) of Bubble Sort and Quick Sort & Discuss why Quick Sort is generally preferred over Bubble Sort.
+
+Algorithm	Best Case	Average Case	Worst Case	Space Complexity
+Bubble Sort	 O(n)	          O(n²)	         O(n²)	            O(1)
+Quick Sort     O(n log n)	O(n log n)	 O(n²)	          O(log n)
+
+
+Quick Sort is significantly faster than Bubble Sort on large datasets. Bubble Sort has O(n²) in most cases, while Quick Sort averages O(n log n). Quick Sort is more efficient in-place.
+
+
+
+

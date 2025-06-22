@@ -1,0 +1,44 @@
+Exercise 4: Employee Management System
+
+Understand Array Representation:
+
+Q) Explain how arrays are represented in memory and their advantages.
+
+An array is a linear data structure that stores a collection of elements (usually of the same data type) in contiguous memory locations. Each element is accessed using an index, typically starting from 0.
+
+
+if take an array of integers, since integer size is 4 bytes the representation is as follows:
+
+arr	4bytes	4bytes	4bytes	4bytes	4bytes	4bytes
+	1000	1004	1008	1012	1016	1020
+
+
+The first element of the array is placed at a base address.
+
+Elements are accessed using an index, which is calculated as:
+
+address = base address + (index * size of each element)
+
+
+Advantages of Arrays:
+
+Fast Access - O(1)
+Efficient for Iteration
+
+
+Q) Analyze the time complexity of each operation (add, search, traverse, delete).
+
+Add - O(1) - go the available index adds the element constant time operation 
+
+Search - O(n) - Search by employeeId or name etc.	
+
+Traverse - O(n) - Visit every element	
+
+Delete - O(n) =	first we need to find the element and shift elements after deletion
+
+
+Q) Discuss the limitations of arrays and when to use them.
+
+Fixed Size
+Inefficient Deletion/Insertion
+No Dynamic Resizing

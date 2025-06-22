@@ -1,0 +1,78 @@
+Exercise 5: Task Management System
+
+Understand Linked Lists:
+
+Q) Explain the different types of linked lists (Singly Linked List, Doubly Linked List).
+
+Singly Linked List: A linear data structure where each element called a node contains:
+
+						-> data (of any type may be built in data types or user defined data types)
+
+						-> a pointer to the next node in the list
+
+structure:
+	
+	[ data | Next ] -> [ data | Next ] ->[ data | Next ] ->[ data | Next ] ->[ data | Next ] -> null
+
+Node class: 
+	
+	class Node{
+		int data;
+		Node Next;
+		Node(int data){
+ 			this.data = data;
+			Next = null;
+		}
+	}
+
+
+Doubly Linked List: It is also a linear data structure where each element called a node contains:
+				
+						-> data (of any type may be built in data types or user defined data types)
+
+						-> a pointer to the next node in the list
+			
+						-> a pointer to the previous node in the list
+
+
+structure:
+	
+	null <-> [ Prev | data | Next ] <-> [ Prev | data | Next ] <-> [ Prev | data | Next ] <-> [ Prev | data | Next ] <-> [ Prev | data | Next ] <-> null
+
+
+Node class: 
+	
+	class Node{
+		int data;
+		Node Next;
+		Node Prev;
+		Node(int data){
+ 			this.data = data;
+			Next = null;
+			Prev = null;
+		}
+	}
+
+
+Q) Analyze the time complexity of each operation.
+
+Operation		Time Complexity
+
+Insertion at Head	  O(1)		Constant time
+Insertion at End	  O(n)		Traverse till last nod
+Deletion		  O(n)		Need to find the node (even deleting takes O(1) finding the node which we want to delete takes O(n))
+Search			  O(n)		Linear search
+Traversal		  O(n)		Visit each node once
+
+Q) Discuss the advantages of linked lists over arrays for dynamic data.
+
+Size Flexibility - allows to increase the size dynamically based on our need.	
+Insertion/Deletion - easy to insert/delete an element since no shifting is required like in the array.
+Memory Allocation - reduces the memory wastage and uses it efficiently whenever needed.
+
+
+
+
+
+
+
